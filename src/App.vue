@@ -1,6 +1,6 @@
-<template>
+<template >
   <v-app>
-    <v-main style="position:absolute">
+    <v-main style="background-color:#ecf0f1">
       <v-img max-height="100vh" src="./assets/laptop.jpg">
         <div class="makeDark">
           <HelloWorld />

@@ -1,6 +1,8 @@
 <template>
   <v-container>
-    <h2 class="text-center mb-4 display-1 mt-5 mb-10">Min kompetens</h2>
+    <h2
+      class="text-center mb-4 display-1 mt-5 mb-10 text-uppercase font-weight-bold"
+    >Blandad kompetens inom</h2>
     <v-container class="d-flex justify-center flex-wrap">
       <v-img
         contain
@@ -59,6 +61,8 @@
         src="../assets/firebase.svg"
       ></v-img>
     </v-container>
+    <v-divider></v-divider>
+    <v-container class="mt-10"></v-container>
   </v-container>
 </template>
 

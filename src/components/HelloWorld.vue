@@ -7,9 +7,15 @@
         mitt cv
         <v-icon right>get_app</v-icon>
       </v-btn>
-      <v-btn x-large color="white" outlined @click="$vuetify.goTo(target,options)">
+      <v-btn
+        class="project-btn"
+        x-large
+        color="white"
+        outlined
+        @click="$vuetify.goTo(target,options)"
+      >
         Mina projekt
-        <v-icon right>mdi-arrow-right</v-icon>
+        <v-icon class="project-icon" right>mdi-arrow-right</v-icon>
       </v-btn>
     </v-container>
     <v-container class="d-flex justify-center">
@@ -42,5 +48,11 @@ export default {
 };
 </script>
 <style scoped>
+.project-btn {
+  transition: ease-in-out 0.1;
+}
+.project-btn:hover .project-icon {
+  padding-left: 5px;
+}
 </style>
 
