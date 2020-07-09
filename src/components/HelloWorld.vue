@@ -2,7 +2,16 @@
   <v-container fill-height class="d-flex align-center justify-center flex-column">
     <h1 class="display-4 text-center white--text">Pontus Zetterberg</h1>
     <h4 class="display-2 text-center font-weight-thin white--text">Frontend-utvecklare</h4>
-
+    <v-container class="d-flex justify-center">
+      <v-btn x-large color="primary" id="btn" class="mr-4 ml-4">
+        mitt cv
+        <v-icon right>get_app</v-icon>
+      </v-btn>
+      <v-btn x-large color="white" outlined @click="$vuetify.goTo(target,options)">
+        Mina projekt
+        <v-icon right>mdi-arrow-right</v-icon>
+      </v-btn>
+    </v-container>
     <v-container class="d-flex justify-center">
       <a href="https://www.linkedin.com/in/pontus-zetterberg-a2b739114/" target="_blank">
         <v-icon id="social-icon" x-large color="white" class="mr-1 ml-1">mdi-linkedin</v-icon>
@@ -15,19 +24,21 @@
         <v-icon id="social-icon" x-large color="white" class="mr-1 ml-1 social-icon">mdi-email-send</v-icon>
       </a>
     </v-container>
-
-    <v-btn x-large>
-      mitt cv
-      <v-icon right>mdi-text-box</v-icon>
-    </v-btn>
   </v-container>
 </template>
 
 <script>
+import * as easings from "vuetify/es5/services/goto/easing-patterns";
 export default {
   name: "HelloWorld",
 
-  data: () => ({})
+  data: () => ({
+    target: ".main-content",
+    duration: 600,
+    offset: 0,
+    easing: "easeInOutCubic",
+    easings: Object.keys(easings)
+  })
 };
 </script>
 <style scoped>

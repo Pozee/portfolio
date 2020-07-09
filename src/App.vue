@@ -6,7 +6,7 @@
           <HelloWorld />
         </div>
       </v-img>
-      <maincontent />
+      <maincontent class="main-content" />
     </v-main>
   </v-app>
 </template>
@@ -37,8 +37,14 @@ export default {
   background-color: black;
   height: 100%;
   width: 100%;
-  opacity: 0.6;
+  opacity: 0.8;
   top: 0;
   z-index: 1;
+}
+.main-content {
+  height: 100vh;
+}
+#btn:hover {
+  color: black !important;
 }
 </style>
