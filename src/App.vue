@@ -1,12 +1,12 @@
 <template >
   <v-app>
-    <v-main style="background-color:#ecf0f1">
+    <v-main style="background-color:#f5f5f5">
       <v-img max-height="100vh" src="./assets/laptop.jpg">
         <div class="makeDark">
           <HelloWorld />
         </div>
       </v-img>
-      <maincontent class="main-content" />
+      <maincontent class="main-content pt-15" />
     </v-main>
   </v-app>
 </template>

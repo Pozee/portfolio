@@ -14,7 +14,7 @@
         outlined
         @click="$vuetify.goTo(target,options)"
       >
-        Mina projekt
+        Projekt & kompetens
         <v-icon class="project-icon" right>mdi-arrow-right</v-icon>
       </v-btn>
     </v-container>
@@ -53,6 +53,7 @@ export default {
 }
 .project-btn:hover .project-icon {
   padding-left: 5px;
+  color: #f5f5f5;
 }
 </style>
 
