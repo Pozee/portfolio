@@ -7,68 +7,14 @@
         >Blandad kompetens inom</h2>
         <v-container class="d-flex justify-center flex-wrap pb-10">
           <v-img
+            v-for="image in images"
+            :key="image.img"
             contain
             class="ml-5 mr-5 mt-5 mb-5"
             max-width="100"
             max-height="100"
             min-width="100"
-            src="../assets/javascript.svg"
-          ></v-img>
-          <v-img
-            contain
-            class="ml-5 mr-5 mt-5 mb-5"
-            max-width="100"
-            max-height="100"
-            min-width="100"
-            src="../assets/angularjs.svg"
-          ></v-img>
-          <v-img
-            contain
-            class="ml-5 mr-5 mt-5 mb-5"
-            max-width="100"
-            max-height="100"
-            min-width="100"
-            src="../assets/vuejs.svg"
-          ></v-img>
-          <v-img
-            contain
-            class="ml-5 mr-5 mt-5 mb-5"
-            max-width="100"
-            max-height="100"
-            min-width="100"
-            src="../assets/react.svg"
-          ></v-img>
-          <v-img
-            contain
-            class="ml-5 mr-5 mt-5 mb-5"
-            max-width="100"
-            max-height="100"
-            min-width="100"
-            src="../assets/css.svg"
-          ></v-img>
-          <v-img
-            contain
-            class="ml-5 mr-5 mt-5 mb-5"
-            max-width="100"
-            max-height="100"
-            min-width="100"
-            src="../assets/html5.svg"
-          ></v-img>
-          <v-img
-            contain
-            class="ml-5 mr-5 mt-5 mb-5"
-            max-width="100"
-            max-height="100"
-            min-width="100"
-            src="../assets/firebase.svg"
-          ></v-img>
-          <v-img
-            contain
-            class="ml-5 mr-5 mt-5 mb-5"
-            max-width="100"
-            max-height="100"
-            min-width="100"
-            src="../assets/logo-redux.png"
+            :src="loadPic(image.src)"
           ></v-img>
         </v-container>
       </v-card>
@@ -80,7 +26,49 @@
 
 <script>
 export default {
-  name: "maincontent"
+  name: "maincontent",
+  data: () => ({
+    images: [
+      {
+        src: "javascript.svg"
+      },
+      {
+        src: "angularjs.svg"
+      },
+      {
+        src: "vuejs.svg"
+      },
+      {
+        src: "react.svg"
+      },
+      {
+        src: "css.svg"
+      },
+      {
+        src: "html5.svg"
+      },
+      {
+        src: "firebase.svg"
+      },
+      {
+        src: "logo-redux.png"
+      }
+    ],
+    projects: [
+      {
+        name: "Webshop koncept för att köpa kaffe",
+        tech: "Vanilla Javascript, CSS & HTML",
+        type: "Grupparbete",
+        github: "www.google.se",
+        liveView: "www.twitch.tv"
+      }
+    ]
+  }),
+  methods: {
+    loadPic(pic) {
+      return require("../assets/" + pic);
+    }
+  }
 };
 </script>
 

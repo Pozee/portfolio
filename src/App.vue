@@ -44,7 +44,4 @@ export default {
 .main-content {
   height: 100vh;
 }
-#btn:hover {
-  color: black !important;
-}
 </style>

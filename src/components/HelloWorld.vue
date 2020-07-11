@@ -5,7 +5,7 @@
     <v-container class="d-flex justify-center">
       <v-btn x-large color="primary" id="btn" class="mr-4 ml-4">
         mitt cv
-        <v-icon right>get_app</v-icon>
+        <v-icon right color="white">get_app</v-icon>
       </v-btn>
       <v-btn
         class="project-btn"
@@ -54,6 +54,12 @@ export default {
 .project-btn:hover .project-icon {
   padding-left: 5px;
   color: #f5f5f5;
+}
+#btn {
+  border: solid transparent 1px !important;
+}
+#btn:hover {
+  border: solid rgba(255, 255, 255, 0.808) 1px !important;
 }
 </style>
 
