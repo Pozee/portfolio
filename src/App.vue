@@ -42,6 +42,6 @@ export default {
   z-index: 1;
 }
 .main-content {
-  height: 100vh;
+  height: 150vh;
 }
 </style>

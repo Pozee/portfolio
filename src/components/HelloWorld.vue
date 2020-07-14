@@ -1,9 +1,24 @@
 <template >
   <v-container fill-height class="d-flex align-center justify-center flex-column">
-    <h1 class="display-4 text-center white--text">Pontus Zetterberg</h1>
-    <h4 class="display-2 text-center font-weight-thin white--text">Frontend-utvecklare</h4>
-    <v-container class="d-flex justify-center">
-      <v-btn x-large color="primary" id="btn" class="mr-4 ml-4">
+    <h1
+      class="text-center white--text text-h1"
+      :class="[$vuetify.breakpoint.xsOnly ? 'text-h3' : 'text-h1']"
+    >Pontus Zetterberg</h1>
+    <h4
+      class="text-center font-weight-thin white--text"
+      :class="[$vuetify.breakpoint.xsOnly ? 'text-h5' : 'text-h3']"
+    >Frontend-utvecklare</h4>
+    <v-container
+      class="d-flex justify-center"
+      :class="[$vuetify.breakpoint.xsOnly ? 'flex-wrap' : '']"
+    >
+      <v-btn
+        x-large
+        color="primary"
+        id="btn"
+        class="mr-4 ml-4"
+        :class="[$vuetify.breakpoint.xsOnly ? 'mb-2' : '']"
+      >
         mitt cv
         <v-icon right color="white">get_app</v-icon>
       </v-btn>
@@ -48,6 +63,9 @@ export default {
 };
 </script>
 <style scoped>
+a {
+  text-decoration: none !important;
+}
 .project-btn {
   transition: ease-in-out 0.1;
 }
