@@ -140,4 +140,7 @@ export default {
   color: rgb(238, 238, 238) !important;
   opacity: 1;
 }
+a {
+  text-decoration: none !important;
+}
 </style>
