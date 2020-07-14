@@ -36,7 +36,7 @@
               <v-icon color="white" size="50px" class="project-icon">preview</v-icon>
             </a>
           </v-container>
-          <v-card-title>{{project.name}}</v-card-title>
+          <v-card-title class="title">{{project.name}}</v-card-title>
         </v-img>
 
         <v-container class="d-flex-column">
@@ -82,20 +82,20 @@ export default {
     ],
     projects: [
       {
-        name: "Kopia av Hästens startaida",
-        tech: "Javascript(Vue.js), CSS & HTML",
+        name: "Kopia av Hästens startsida",
+        tech: "Vue.js, CSS & HTML",
         type: "Solo",
         github: "https://github.com/Pozee/hastens-homepage",
         liveView: "https://pozee.github.io/hastens-homepage/",
         imgPreview: "https://i.imgur.com/V62n9cu.jpg"
       },
       {
-        name: "Kopia av Hästens startaida",
-        tech: "Javascript(Vue.js), CSS & HTML",
+        name: "Livechat",
+        tech: "Vue.js, Firebase, CSS & HTML",
         type: "Solo",
         github: "https://github.com/Pozee/hastens-homepage",
         liveView: "https://pozee.github.io/hastens-homepage/",
-        imgPreview: "https://i.imgur.com/V62n9cu.jpg"
+        imgPreview: "https://i.imgur.com/52BOij3.png"
       },
       {
         name: "Kopia av Hästens startaida",
@@ -134,13 +134,18 @@ export default {
 <style scoped>
 .project-icon {
   cursor: pointer;
-  opacity: 0.7;
+  color: rgb(216, 216, 216) !important;
+  opacity: 1;
 }
 .project-icon:hover {
-  color: rgb(238, 238, 238) !important;
-  opacity: 1;
+  color: rgb(156, 156, 156) !important;
 }
 a {
   text-decoration: none !important;
+}
+.title {
+  padding: 0;
+  padding-left: 0.5em;
+  background-color: rgb(182, 182, 182);
 }
 </style>
