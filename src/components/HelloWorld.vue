@@ -12,16 +12,18 @@
       class="d-flex justify-center"
       :class="[$vuetify.breakpoint.xsOnly ? 'flex-wrap' : '']"
     >
-      <v-btn
-        x-large
-        color="primary"
-        id="btn"
-        class="mr-4 ml-4"
-        :class="[$vuetify.breakpoint.xsOnly ? 'mb-2' : '']"
-      >
-        mitt cv
-        <v-icon right color="white">get_app</v-icon>
-      </v-btn>
+      <a href="Pontus-Zetterberg-CV.png" download>
+        <v-btn
+          x-large
+          color="primary"
+          id="btn"
+          class="mr-4 ml-4"
+          :class="[$vuetify.breakpoint.xsOnly ? 'mb-2' : '']"
+        >
+          mitt cv
+          <v-icon right color="white">get_app</v-icon>
+        </v-btn>
+      </a>
       <v-btn
         class="project-btn"
         x-large
@@ -58,8 +60,8 @@ export default {
     duration: 600,
     offset: 0,
     easing: "easeInOutCubic",
-    easings: Object.keys(easings)
-  })
+    easings: Object.keys(easings),
+  }),
 };
 </script>
 <style scoped>
